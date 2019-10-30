@@ -27,6 +27,6 @@ Designing tests by **Wendan**:
 1. single_command_tests.sh **tests primarily for command executions**
 2. multiple_commands_tests.sh **tests primarily for command and connectors interaction**
 3. commented_command_tests.sh **tests primarily for comments being respected**
-4.exit_command_tests.sh **tests primarily for proper exit functionality**
+4.exit_command_tests.sh **tests primarily for proper exit functionality**.
 Testing by **Wendan**.
 Final checking by **Dehao** and **Wendan**.
