@@ -10,6 +10,7 @@ Creating a program that develop a shell which called rshell and could runs these
 - Execute the appropriate commands using fork, execvp, and waitpid
   - The example code: 
   `$ executable [argumentList] [connector] [executable]`
+  
 To develop this shell, It should be have a virtual class which name is `base_command`, and three classes inherit from the `base_command` and named `commands`, `single_commands`, `multiple_commands`. The commands class have a vector to hold single_commands and multiple_commands. 
 ## Diagram
 
