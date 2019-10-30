@@ -47,14 +47,14 @@ This program tests the fork(), waitpid() and execvp() functions.
 What this program do is, output a "start fork()" from the parent and output a "in the fork" from the child, which is created by the fork() function. And do a `echo` command to post a "hellow world" in the command from the child.
  
 ## Development and Testing Roadmap
-Coding by **Dehao**:
+Coding by **Dehao**([link to Issue!]https://github.com/cs100/assignment-goodluck/issues/1):
 -coding the class for `base_command`, `commands`, `single_commands`, `multiple_commands`.
-Designing tests by **Wendan**:
+Designing tests by **Wendan**([Link to Issue!]https://github.com/cs100/assignment-goodluck/issues/2):
 1. single_command_tests.sh **tests primarily for command executions**
 2. multiple_commands_tests.sh **tests primarily for command and connectors interaction**
 3. commented_command_tests.sh **tests primarily for comments being respected**
 4. exit_command_tests.sh **tests primarily for proper exit functionality**
 
-Testing by **Wendan**.
+Testing by **Wendan**([Link to issue!]https://github.com/cs100/assignment-goodluck/issues/3).
 
-Final checking by **Dehao** and **Wendan**.
+Final checking by **Dehao** and **Wendan**([Link to Issue!]https://github.com/cs100/assignment-goodluck/issues/4).
