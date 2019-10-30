@@ -1,4 +1,4 @@
-#CS 100 Programming Project
+# CS 100 Programming Project
 2019 Fall.
 
 Project designer:
