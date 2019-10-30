@@ -25,7 +25,23 @@ class `single_commands`: a class which inherits from `base_command` and saves on
 
 class `multiple_commands`: a class which inherits from `base_command` and saves one multiple commands order.
 ## Prototypes/Research
-
+```
+#inlcude <stdlib.h>
+#include <unisted.h>
+#include <sys/wait.h>
+int main(int argc, char* argv[]){
+	pid_t pid=fork();
+	char* command[]={"echo", "hellow world", 0}
+	if (pid>0) {
+		printf("start fork()\n");
+		waitpid(pid,NULL,0);
+	} else if (pid==0) {
+		printf("in the fork()\"n");
+		execvp(command[0],command);
+	}
+	return 0;
+}
+```
 ## Development and Testing Roadmap
 Coding by **Dehao**:
 -coding the class for `base_command`, `commands`, `single_commands`, `multiple_commands`.
