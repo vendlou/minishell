@@ -15,8 +15,11 @@ To develop this shell, It should be have a virtual class which name is `base_com
 
 ## Classes
 class `base_command`: a virtual class used for these class, `commands`, `single_commands` and `multiple_commands`.
+
 class `commands`: a class which inherit from `base_command` and have a vector to reference to the `single_commands` and `multiple_commands`.
+
 class `single_commands`: a class which inherit from `base_command` and save one single command.
+
 class `multiple_commands`: a class which inherit from `base_command` and save one multiple commands order.
 ## Prototypes/Research
 
@@ -30,4 +33,5 @@ Designing tests by **Wendan**:
 4. exit_command_tests.sh **tests primarily for proper exit functionality**
 
 Testing by **Wendan**.
+
 Final checking by **Dehao** and **Wendan**.
