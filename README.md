@@ -14,7 +14,10 @@ Creating a program that develop a shell which called rshell and could runs these
   
 To develop this shell, It should be have a virtual class which name is `base_command`, and three classes inherit from the `base_command` and named `commands`, `single_commands`, `multiple_commands`. The commands class have a vector to hold single_commands and multiple_commands. 
 ## Diagram
-
+![Image of class]
+(Images/Class_Design.png)
+![Image of OMT]
+(Images/OMT.png)
 ## Classes
 class `base_command`: a virtual class used for these class, `commands`, `single_commands` and `multiple_commands`.
 
