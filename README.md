@@ -3,7 +3,7 @@
 
 Project designer:
 1. Wendan Lou X677597
-2. Dehao Dai 862152679
+2. Dehao Dai  862152679
 ## Introduction
 Develop a command shell called rshell which can perform the following steps:
 - Print a command prompt
@@ -44,16 +44,16 @@ int main(int argc, char* argv[]){
 ```
 This program tests the fork(), waitpid() and execvp() functions.
 
-What the program does is, outputting a "start fork()" from the parent and a "in the fork" from the child, which is created by the fork() function. And do a `echo` command to post a "hello world" in the command from the child.
+What the program does is, outputting "start fork()" from the parent and "in the fork" from the child, which are created by the fork() function. And do a `echo` command to post a "hello world" in the command from the child.
  
 ## Development and Testing Roadmap
 Coding by **Dehao**([Link to Issue!](https://github.com/cs100/assignment-goodluck/issues/1) ):
 -coding the class for `base_command`, `commands`, `single_commands`, `multiple_commands`.
 Designing tests by **Wendan**([Link to Issue!](https://github.com/cs100/assignment-goodluck/issues/2)):
-1. single_command_tests.sh **tests primarily for command executions**
-2. multiple_commands_tests.sh **tests primarily for command and connectors interaction**
-3. commented_command_tests.sh **tests primarily for comments being respected**
-4. exit_command_tests.sh **tests primarily for proper exit functionality**
+1. single_command_tests.sh     **tests primarily for command executions**
+2. multiple_commands_tests.sh  **tests primarily for command and connectors interaction**
+3. commented_command_tests.sh  **tests primarily for comments being respected**
+4. exit_command_tests.sh       **tests primarily for proper exit functionality**
 
 Testing by **Wendan**([Link to issue!](https://github.com/cs100/assignment-goodluck/issues/3)).
 
