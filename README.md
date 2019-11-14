@@ -12,7 +12,7 @@ Creating a program that develop a shell which called rshell and could run these 
   - The example code: 
   `$ executable [argumentList] [connector] [executable]`
   
-To develop this shell, It should have a virtual class whose name is `base_command`, and three classes inherit from the `base_command` and named `commands`, `single_commands`, `multiple_commands`. The commands class have a vector to hold single_commands and multiple_commands. 
+To develop this shell, It should have a virtual class whose name is `base_command`, and three classes inherit from the `base_command` and named `commands`, `single_commands`, `multiple_commands`,. The commands class have a vector to hold single_commands and multiple_commands. 
 ## Diagram
 ![Image of class](https://github.com/cs100/assignment-goodluck/blob/master/Images/Class_Design.png)
 ![Image of OMT](https://github.com/cs100/assignment-goodluck/blob/master/Images/OMT.png)
