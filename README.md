@@ -17,33 +17,33 @@ To develop this shell, it should have a virtual class whose name is `base_comman
 ![Image of class](https://github.com/cs100/assignment-goodluck/blob/master/Images/Class_Design2.png)"
 ![Image of OMT](https://github.com/cs100/assignment-goodluck/blob/master/Images/OMT2.png)
 ## Classes
-class `base_command`: a virtual class used for these class, `commented_commands`, `single_commands` and `multiple_commands`.
+class `base_command`: a virtual class used for following classes, `commented_commands`, `single_commands` and `multiple_commands`.
 - a `virtual bool do_command()` function
 - a `void execute(char* arglist[])` function, to run the command by using `execvp`.
 
 class `multiple_commands`: a class which inherits from `base_command` and has a vector of reference to the `single_commands` and `commented_commands`.
 - `private`
-  - `vector<Base_Commands*>` save the `single_commands` and `commented_commands`
+  - `vector<Base_Commands*>` saves the `single_commands` and `commented_commands`
 - `public`
   - `void add_command(Base_Commands*)` Add a new command.
-  - `bool do_commands()` Doing a command, and return a boolean value which the command is working successful or not.
+  - `bool do_commands()` Do a command, and return a boolean value to verify the command works successfully or not.
   - `void cin_commands(char*)` Read the `.sh` file
-  - `void commented_commands(std::string,int&,Base_Commands*)` Saving the commented command
+  - `void commented_commands(std::string,int&,Base_Commands*)` Save the commented command.
 
 class `single_commands`: a class which inherits from `base_command` and saves one single command.
 - `private`
-  - `char* command[]` Saving the command
+  - `char* command[]` Save the command
 - `public`
-  - `bool do_commands()` Doing a command, and return a boolean value which the command is working successful or not.
+  - `bool do_commands()` Do a command, and return a boolean value to verify the command works successful or not.
 
 class `commented_commands`: a class which inherits from `base_command` and saves one single command.
 - `private`
-  - `vector<char>` Saving the Operator
-  - `std::vector<Base_Commands*>` Saving the commands
+  - `vector<char>` Save the Operator
+  - `std::vector<Base_Commands*>` Save the commands
 - `public`
-  - `void add(Base_Commands*,char)` Adding a command with a operator
-  - `void add(Base_Commands*)` Adding a command
-  - `bool do_commands()` Doing a command, and return a boolean value which the command is working successful or not.
+  - `void add(Base_Commands*,char)` Add a command with a operator
+  - `void add(Base_Commands*)` Add a command
+  - `bool do_commands()` Do a command, and return a boolean value to verify the command works successful or not.
 
 ## Prototypes/Research
 ```
