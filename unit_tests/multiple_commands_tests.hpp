@@ -1,11 +1,12 @@
-#ifndef __MULT_TEST_HPP__
-#define __MULT_TEST_HPP__
-#include "../header/base_commands.hpp"	
-#include "../header/commented_commands.hpp" 
-#include "../header/multiple_commands.hpp" 
-#include "../header/single_commands.hpp"
-TEST(DecoratorTest, StringifyTest) {	
-	Commented_Commands* cm=new Commented_Commands("../integration_tests/multiple_commands_tests.sh");
-	EXPECT_EQ(cm->do_commands,"hello world\nhi"); 
+#ifndef __MULTIPLE_COMMANDS_TESTS_HPP__
+#define __MULTIPLE_COMMANDS_TESTS_HPP__
+#include "../header/base_commands.h"	
+#include "../header/commented_commands.h" 
+#include "../header/multiple_commands.h" 
+#include "../header/single_commands.h"
+TEST(Multiple_commands_tests, TEST2) {	
+	char* st="integration_tests/multiple_commands_tests.sh";
+	Multiple_Commands* mc=new Multiple_Commands(st);
+	EXPECT_TRUE(mc->do_commands());
 }
 #endif

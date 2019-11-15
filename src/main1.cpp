@@ -1,6 +1,6 @@
 #include <iostream>
 #include <fstream>
-#include "../header/multiple_commands.hpp"
+#include "../header/multiple_commands.h"
 
 int main(){
 	char* st="../integration_tests/multiple_commands_tests.sh";

@@ -1,7 +1,7 @@
 #ifndef __COMMENTED_COMMANDS__
 #define __COMMENTED_COMMANDS__
 
-#include "base_commands.hpp"
+#include "base_commands.h"
 #include<vector>
 #include "string.h"
 class commented_command:public Base_Commands{
@@ -16,6 +16,7 @@ public:
 	}
 	void add(Base_Commands* c){ com_commands.push_back(c);}
 	bool do_commands();
+	char* get_first_command(){return com_commands[0]->get_first_command();}
 };
 bool commented_command::do_commands(){
 	bool k=com_commands[0]->do_commands();

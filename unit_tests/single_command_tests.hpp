@@ -1,11 +1,12 @@
-#ifndef __SINGLE_TEST_HPP__
-#define __SINGLE_TEST_HPP__
-#include "../header/base_commands.hpp"
-#include "../header/commented_commands.hpp"
-#include "../header/multiple_commands.hpp"
-#include "../header/single_commands.hpp"
-TEST(DecoratorTest, EvaluateTest) {	
-	Multiple_Commands* mc=new Multiple_Commands("../integration_tests/single_command_tests.sh");
-	EXPECT_EQ(mc->do_command(),"hello");   
+#ifndef __SINGLE_COMMAND_TESTS_HPP__
+#define __SINGLE_COMMAND_TESTS_HPP__
+#include "../header/base_commands.h"
+#include "../header/commented_commands.h"
+#include "../header/multiple_commands.h"
+#include "../header/single_commands.h"
+TEST(Single_command_tests, TEST1) {	
+	char* st="integration_tests/single_command_tests.sh";
+	Multiple_Commands* mc=new Multiple_Commands(st);
+	EXPECT_TRUE(mc->do_commands());
 }
 #endif

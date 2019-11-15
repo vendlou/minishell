@@ -1,8 +1,8 @@
 #ifndef __MULTIPLE_COMMANDS__
 #define __MULTIPLE_COMMANDS__
 
-#include "single_commands.hpp"
-#include "commented_commands.hpp"
+#include "single_commands.h"
+#include "commented_commands.h"
 #include <vector>
 #include <string>
 #include "string.h"
@@ -17,6 +17,7 @@ public:
 	void cin_commands(char*);
 	//void printc();
 	void commented_commands(std::string,int&,Base_Commands*);
+	char* get_first_command(){return commands[0]->get_first_command();}
 };
 Multiple_Commands::Multiple_Commands(char* Filename){
 	cin_commands(Filename);
@@ -25,10 +26,12 @@ void Multiple_Commands::add_command(Base_Commands* single){
 	commands.push_back(single);
 }
 bool Multiple_Commands::do_commands(){
+	bool k=true;
 	for (int i=0;i<commands.size();i++){
-		commands[i]->do_commands();
+		if ((std::string)commands[i]->get_first_command()=="exit") return true;
+		k=k&&commands[i]->do_commands();
 	}
-	return true;
+	return k;
 }
 void Multiple_Commands::cin_commands(char* Filename){
 	std::ifstream inFile;
@@ -43,6 +46,7 @@ void Multiple_Commands::cin_commands(char* Filename){
 	while (!inFile.eof()){
 		for (int i=0;i<20;i++) command[i]=NULL;
 		inFile.getline(st,50);
+		if (inFile.eof()) break;
 		index=0;
 		num=0;
 		st2="";

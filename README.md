@@ -20,6 +20,7 @@ To develop this shell, it should have a virtual class whose name is `base_comman
 class `base_command`: a virtual class used for these class, `commented_commands`, `single_commands` and `multiple_commands`.
 - a `virtual bool do_command()` function
 - a `void execute(char* arglist[])` function, to run the command by using `execvp`.
+- a `virtural get_first_command` fuction, which use for cheching the first commad is "exit" or not.
 
 class `multiple_commands`: a class which inherits from `base_command` and has a vector of reference to the `single_commands` and `commented_commands`.
 - `private`

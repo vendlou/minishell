@@ -1,7 +1,7 @@
 #ifndef __SINGLE_COMMANDS__
 #define __SINGLE_COMMANDS__
 
-#include "base_commands.hpp"
+#include "base_commands.h"
 class Single_Commands:public Base_Commands{
 private:
 	char* command[21];
@@ -9,7 +9,7 @@ public:
 	Single_Commands(){};
 	Single_Commands(char*[]);
 	bool do_commands();
-	void printc();
+	char* get_first_command(){return command[0];};
 };
 Single_Commands::Single_Commands(char* command[]){
 	for (int i=0;i<20;i++) this->command[i]=NULL;
@@ -31,17 +31,14 @@ bool Single_Commands:: do_commands(){
 	if (pid>0) {
 		waitpid(pid,NULL,0);
 	} else if (pid==0){
-		execvp(command[0],command);
-	}else {
-		perror("execvp failed");
-		return false;
+		if (command[0]==(char*)"exit") return exit;
+		if (execvp(command[0],command)==-1) {
+			perror("execvp failed");
+			return false;
+		}
+		
 	}
 	return true;
 
-}
-void Single_Commands::printc(){
-	for (int i=0;i<4;i++){
-		if (command[i]==NULL) break;
-	}
 }
 #endif
