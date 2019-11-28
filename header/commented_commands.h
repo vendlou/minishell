@@ -9,6 +9,7 @@ private:
 	std::vector<char> Op;
 	std::vector<Base_Commands*> com_commands;
 public:
+	commented_command() {}
 	commented_command(Base_Commands* c,char s) {add(c,s);}
 	void add(Base_Commands* c,char s){
 		com_commands.push_back(c);
@@ -25,6 +26,7 @@ bool commented_command::do_commands(){
 			if (k) k=com_commands[i+1]->do_commands();
 		} else if (Op[i]=='|'){
 			if (!k) k=com_commands[i+1]->do_commands();
+			else k=true;
 		}
 	}
 	return k;

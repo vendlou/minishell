@@ -1,1 +1,2 @@
-echo hello world && echo hi || echo bye
+
+./rshell "integration_tests/multiple_commands_tests.txt"

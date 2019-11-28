@@ -39,6 +39,5 @@ bool Single_Commands:: do_commands(){
 		
 	}
 	return true;
-
 }
 #endif

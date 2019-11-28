@@ -5,7 +5,7 @@
 #include "../header/multiple_commands.h"
 #include "../header/single_commands.h"
 TEST(Single_command_tests, TEST1) {	
-	char* st="integration_tests/single_command_tests.sh";
+	char* st="integration_tests/single_command_tests.txt";
 	Multiple_Commands* mc=new Multiple_Commands(st);
 	EXPECT_TRUE(mc->do_commands());
 }

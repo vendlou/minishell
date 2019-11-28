@@ -6,7 +6,7 @@
 #include "../header/multiple_commands.h" 
 #include "../header/single_commands.h"
 TEST(commented_command_tests, TEST1) {
-	Multiple_Commands* mc= new Multiple_Commands("integration_tests/commented_command_tests.sh");
+	Multiple_Commands* mc= new Multiple_Commands("integration_tests/commented_command_tests.txt");
 	EXPECT_TRUE(mc->do_commands());
 }
 

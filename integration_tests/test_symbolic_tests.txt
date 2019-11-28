@@ -1,0 +1,3 @@
+[ -e integration_tests/test_symbolic_tests.txt ]
+[ -e integration_tests/test_symbolic_tests.txt ] && echo “path exists”
+[ -e integration_tests/test_symbolic_tests.txt ] || echo “path not exists”
