@@ -1,4 +1,4 @@
-S 100 Programming Project
+CS 100 Programming Project
 2019 Fall.
 
 Project designer:
@@ -36,6 +36,7 @@ class `single_commands`: a class which inherits from `base_command` and saves on
   - `char* command[]` Save the command
 - `public`
   - `bool do_commands()` Do a command, and return a boolean value to indicate whether the command works well or not.
+  - `bool do_commands(int,int)` Doing a command with pipe, the two intergers save each side of two pipes, one pipe's read side and one pipe's write side.
 
 class `commented_commands`: a class which inherits from `base_command` and saves one single command.
 - `private`
@@ -53,6 +54,14 @@ class `test_commands`: a class which inherits from `base_command` and saves a te
 - `public`
 	- `t_add(string,int&)` if it is `test`
 	- `s_add(string,int&)` if it is `[`
+	
+class `R_command`: a class which inherits from `base_command` and saves a redirection command.
+- `private`
+	- `char type` Identify it is '<' or '>' or '<<'
+	- `string address` the address of redirection point to
+- `public`
+	- `add(string,int&i)` adding function
+	- `do_commands()` doing redirection
 ## Prototypes/Research
 ```
 #inlcude <stdlib.h>
@@ -86,9 +95,13 @@ Designing tests by **Wendan**([Link to Issue!](https://github.com/cs100/assignme
 5. precedence_tests.sh
 6. test_literal_tests.sh
 7. test_symbolic_tests.sh
+8. input_redirection_tests.sh
+9. output_redirection_tests.sh
+10. pipe_operator_tests.sh
 
 
 Testing by **Wendan**([Link to issue!](https://github.com/cs100/assignment-goodluck/issues/3)).
 
 Final checking by **Dehao** and **Wendan**([Link to Issue!](https://github.com/cs100/assignment-goodluck/issues/4)).
+
 
