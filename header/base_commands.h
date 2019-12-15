@@ -12,5 +12,6 @@ public:
 	void execute (char* arglist[]) {execvp(arglist[0],arglist);}
 	virtual bool do_commands()=0;
 	virtual char* get_first_command()=0;
+	virtual bool do_commands(int,int)=0;
 };
 #endif

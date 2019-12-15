@@ -1,0 +1,1 @@
+echo hello | tr a-z A-Z > 2.txt

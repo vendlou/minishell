@@ -16,6 +16,7 @@ public:
 	void t_add(std::string,int&);
 	void s_add(std::string,int&);
 	bool do_commands();
+	bool do_commands(int,int){}
 	char* get_first_command(){}
 };
 void Test_Command::t_add(std::string st, int& i){

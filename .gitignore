@@ -42,4 +42,6 @@ bin
 lib
 Makefile
 cmake_install.cmake
-
+infile.txt
+inputfile.txt
+outputfile.txt

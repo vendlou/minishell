@@ -1,0 +1,1 @@
+< 1.txt tr a-z A-Z

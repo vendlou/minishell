@@ -6,8 +6,12 @@
 #include "../header/multiple_commands.h" 
 #include "../header/single_commands.h"
 TEST(Exit_Test, TEST1) {
-	Multiple_Commands* cm= new Multiple_Commands("integration_tests/exit_command_tests.txt");
-	EXPECT_TRUE(cm->do_commands());
+	std::string st = "exit echo hello";
+	std::ofstream outfile("infile.txt");
+	outfile<<st;
+	outfile.close();
+	Multiple_Commands* mc = new Multiple_Commands("infile.txt");
+	EXPECT_TRUE(mc->do_commands());
 }
 
 #endif
