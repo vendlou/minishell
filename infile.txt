@@ -1,0 +1,1 @@
+echo hello ok | tr a-z A-Z | tr A-Z a-z | tr a-z A-Z | tr A-Z a-z

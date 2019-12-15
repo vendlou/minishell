@@ -7,7 +7,9 @@
 #include "../unit_tests/test_literal_tests.hpp"
 #include "../unit_tests/test_symbolic_tests.hpp"
 #include "../unit_tests/precedence_tests.hpp"
-
+#include "../unit_tests/input_redirection_tests.hpp"
+#include "../unit_tests/output_redirection_tests.hpp"
+#include "../unit_tests/pipe_operator_tests.hpp"
 
 int main(int argc, char **argv) {
 	::testing::InitGoogleTest(&argc, argv);
